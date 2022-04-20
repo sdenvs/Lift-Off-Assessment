@@ -1,16 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
-import { DataGrid, GridActionsCellItem, GridToolbar } from "@mui/x-data-grid";
-import DeleteIcon from "@mui/icons-material/Delete";
-import { Checkbox, Button, TextField } from "@mui/material";
-import { GridCellEditCommitParams } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
+import {  Button, TextField } from "@mui/material";
 import { faker } from "@faker-js/faker";
 
 function EmployeeData() {
   const [isLoading, setIsLoading] = useState(true);
   const [employeeData, setEmployeeData] = useState([]);
-  const [selectedData, setSelectedData] = useState([]);
   const [SearchText, setSearchText] = useState("");
 
   const columns = [
